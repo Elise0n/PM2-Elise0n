@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Películas 🎥</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1>Películas</h1>
+      <a href="form.html" class="btn btn-success">➕ Agregar Película</a>
+    </div>
+
+    <div id="contenedor-peliculas" class="row g-4">
+      <!-- Aquí van las tarjetas -->
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form id="form-editar">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body row">
+          <input type="hidden" id="edit-id" />
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" id="edit-title" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Director</label>
+            <input type="text" class="form-control" id="edit-director" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Año</label>
+            <input type="number" class="form-control" id="edit-year" min="1900" max="2099" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Duración</label>
+            <input type="text" class="form-control" id="edit-duration" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Géneros (separados por coma)</label>
+            <input type="text" class="form-control" id="edit-genre" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Rating</label>
+            <input type="number" class="form-control" id="edit-rating" min="0" max="10" step="0.1" required />
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Poster URL</label>
+            <input type="url" class="form-control" id="edit-poster" required />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Guardar Cambios</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
